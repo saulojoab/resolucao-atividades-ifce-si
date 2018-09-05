@@ -23,23 +23,40 @@ conseguir pensar.
 """
 
 def verificarDivisores(numero):
+    """
+    Essa função verifica os divisores de um número e retorna uma lista com esses divisores.
+    :param numero:
+    :return:
+    """
     listaDeDivisores = []
 
+    # Para cada número entre 1 e o número informado.
     for i in range(1, numero):
+        # Verifica se o número é divisor do número informado e adiciona ele na lista.
         if (numero % i == 0):
             listaDeDivisores.append(i);
 
+    # Retorna a lista com os divisores.
     return listaDeDivisores;
 
 def verificarPerfeito(numero):
+    """
+    Essa função verifica se um número informado é perfeito.
+    :param numero:
+    :return:
+    """
+    # Recebendo a lista de divisores do número informado.
     lista = verificarDivisores(numero);
 
+    # Caso a soma dos divisores for igual ao número informado.
     if (sum(lista) == numero):
         print "O número {} é perfeito!".format(numero);
         print "A soma de seus divisores é: {}".format(sum(lista));
+    # Caso não seja.
     else:
         print "O número {} não é perfeito!".format(numero);
         print "A soma de seus divisores é: {}".format(sum(lista));
 
 if __name__ == "__main__":
-    verificarPerfeito(496);
+    # Chamando a função que verifica se o número é perfeito ou não.
+    verificarPerfeito(input());
