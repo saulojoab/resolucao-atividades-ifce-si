@@ -21,9 +21,9 @@ def verificarPalindromo(string):
     Essa função verifica se uma string é palíndroma (igual de trás pra frente).
     Inicialmente, invertemos a string.
     Depois, verificamos se ela é igual à original mesmo estando invertida.
-    Finalmente, informamos ao usuário.
+    Finalmente, retornamos o resultado.
     :param string:
-    :return:
+    :return string:
     """
     # Inicializando as variáveis.
     stringInvertida = "";
@@ -44,7 +44,5 @@ def verificarPalindromo(string):
         print "{} e {} não são palíndromos!".format(stringInvertida, string);
 
 if __name__ == "__main__":
-    # Recebendo a entrada do usuário.
-    string = raw_input("Insira a frase a ser verificada: ");
-    # Chamando a função para verificar.
-    verificarPalindromo(string);
+    # Chamando a função para verificar com a entrada do usuário.
+    print verificarPalindromo(raw_input("Insira a frase a ser verificada: "));

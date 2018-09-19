@@ -26,8 +26,8 @@ def maiorNumeroArgs(*numeros):
         # Acrescentando +1 ao nosso contador.
         cont = cont + 1;
 
-    # Mostrando o maior número ao usuário.
-    print "Maior número (arg): {}".format(maiorNumero);
+    # Retornando o maior número ao usuário.
+    return maiorNumero;
 
 def maiorNumeroKwarg(**numeros):
     """
@@ -44,10 +44,10 @@ def maiorNumeroKwarg(**numeros):
         if (i > maior):
             maior = i;
 
-    # Informando o maior número ao usuário.
-    print "Maior número (kwarg): {}".format(maior);
+    # Retornando o maior número.
+    return maior;
 
 if __name__ == "__main__":
     # Chamando as duas funções e informando seus valores.
-    maiorNumeroArgs(1,2,3);
-    maiorNumeroKwarg(primeiro=1,segundo=4,terceiro=3);
+    print "Maior número (arg): {}".format(maiorNumeroArgs(1, 2, 3));
+    print "Maior número (kwarg): {}".format(maiorNumeroKwarg(primeiro=1, segundo=4, terceiro=3));

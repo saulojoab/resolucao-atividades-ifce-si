@@ -42,6 +42,8 @@ def verificarDivisores(numero):
 def verificarPerfeito(numero):
     """
     Essa função verifica se um número informado é perfeito.
+    A função retorna uma string com o resultado.
+    ATENÇÃO: A função utiliza a função verificarDivisores.
     :param numero:
     :return:
     """
@@ -50,13 +52,11 @@ def verificarPerfeito(numero):
 
     # Caso a soma dos divisores for igual ao número informado.
     if (sum(lista) == numero):
-        print "O número {} é perfeito!".format(numero);
-        print "A soma de seus divisores é: {}".format(sum(lista));
+        return "O número {} é perfeito!".format(numero);
     # Caso não seja.
     else:
-        print "O número {} não é perfeito!".format(numero);
-        print "A soma de seus divisores é: {}".format(sum(lista));
+        return "O número {} não é perfeito!".format(numero);
 
 if __name__ == "__main__":
     # Chamando a função que verifica se o número é perfeito ou não.
-    verificarPerfeito(input());
+    print verificarPerfeito(input());

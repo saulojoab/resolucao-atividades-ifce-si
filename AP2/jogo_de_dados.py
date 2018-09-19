@@ -37,15 +37,13 @@ def clear():
     """
     print("*" * 30);
 
-def dice_game():
+def dice_game(num):
     """
     Essa é a função principal do jogo de dados.
-    Ao executá-la, toda a lógica do jogo será executada.
+    O usuário tentará acertar o número da soma dos dados.
+    A função retornará uma string com o resultado.
     :return:
     """
-
-    # Recebendo o input do usuário.
-    num = int(input("Digite um número de 1 a 12: "));
 
     # Se o número for maior que zero, e menor que 13.
     if (num > 0) and (num < 13):
@@ -53,9 +51,10 @@ def dice_game():
         result = randomizing_dices();
         # Caso a soma dos dados seja o número que o usuário informou, ele acertou.
         if (num == result):
-            print "RESULTADO: Acertou, fuck yeah!";
+            return "RESULTADO: Acertou, fuck yeah!";
         # Caso a soma dos dados não corresponda com o que o usuário informou, ele errou.
         else:
-            print "RESULTADO: Opa, errou. Sorry.";
+            return "RESULTADO: Opa, errou. Sorry.";
 
-dice_game();
+if __name__ == "__main__":
+    print dice_game(int(input("Digite um número de 1 a 12: ")));

@@ -29,11 +29,11 @@ def somarElementosDaLista(lista):
         soma = soma + i;
 
     # Printando o resultado.
-    print soma;
+    return soma;
 
 if __name__ == "__main__":
     # Criando uma lista de exemplo.
     listaDeExemplo = [8, 2, 3, 0, 7];
 
     # Chamando a função e inserindo nossa lista de exemplo como parâmetro.
-    somarElementosDaLista(listaDeExemplo);
+    print somarElementosDaLista(listaDeExemplo);

@@ -14,7 +14,7 @@ def calcularFatorial(numero):
     Inicialmente, criamos uma variável resultado que recebe o valor 1.
     Após isso, enquanto o número inserido como parâmetro for maior que 1, multiplicamos ele pela variável "resultado"
     e subtraimos 1 do número.
-    Finalmente, printamos o resultado na tela.
+    Finalmente, retornamos o resultado.
     :param numero:
     :return:
     """
@@ -29,8 +29,8 @@ def calcularFatorial(numero):
         numero = numero - 1;
 
     # Printando o resultado final.
-    print resultado;
+    return resultado;
 
 if __name__ == "__main__":
     # Chamando a função.
-    calcularFatorial(4);
+    print calcularFatorial(input("Insira o número para calcular o fatorial: "));

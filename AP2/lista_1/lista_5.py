@@ -99,21 +99,21 @@ def verificaTamanho(string):
 
 def verificaSenha(string):
     """
-    Essa função é basicamente a união de todas as funções anteriores.
+    Essa função é basicamente a união de todas as funções anteriores:
+    (verificaMaiusculasMinusculas, verificaNumero, verificaCaracteresEspeciais, verificaTamanho).
+
     Ela verifica se a string inserida corresponde com o que foi requisitado na questão.
     :param string:
     :return:
     """
     # Verificando se todas as outras funções retornam um boolean verdadeiro. Caso sim, avisa ao usuário que a senha está válida.
     if (verificaCaracteresEspeciais(string) and verificaMaiusculasMinusculas(string) and verificaNumero(string) and verificaTamanho(string)):
-        print "Sua senha é válida!";
+        return "Sua senha é válida!";
     # Caso alguma das funções retorne falso.
     else:
-        print "Sua senha é inválida!";
+        return "Sua senha é inválida!";
 
 if __name__ == "__main__":
-    # Recebendo a senha do usuário.
-    senha = raw_input("Insira sua senha: ");
-    # Verificando se ela está nos conformes.
-    verificaSenha(senha);
+    # Verificando se a senha informada pelo usuário está nos conformes.
+    print verificaSenha(raw_input("Insira sua senha: "));
 
